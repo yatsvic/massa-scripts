@@ -10,7 +10,7 @@ LOGFILE="${FILENAME%.*}.log"
 
 if [ 1 -eq "$(echo "100.00 < $BALANCE" | bc)" ]
 then
-  echo "$TIMESTAMP ERR $WALLET_INFO" >> $LOGFILE	
+  echo "$TIMESTAMP BUY $WALLET_INFO" >> $LOGFILE	
   ./massa-client buy_rolls "$WALLET_ADDRESS" 1 0
 else
   echo "$TIMESTAMP OK" >> $LOGFILE
